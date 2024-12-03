@@ -1,0 +1,10 @@
+<h1>{{titulo}}</h1>
+<ul>
+    {{#each trabajos}}
+    <li>
+        <strong>{{this.titulo}}</strong>
+        <p>Descripción: {{this.descripcion}}</p>
+        <p>Empresa: {{this.empresa}}</p>
+    </li>
+    {{/each}}
+</ul>
