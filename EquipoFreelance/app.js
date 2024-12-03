@@ -1,5 +1,3 @@
-
-// Archivo principal de configuración del servidor
 const express = require('express');
 const { engine } = require('express-handlebars');
 const pool = require('./config/database');
@@ -19,6 +17,9 @@ app.set('views', './views');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Archivos estáticos
+app.use('/public', express.static('public'));
+
 // Rutas
 app.use('/trabajos', trabajosRoutes);
 app.use('/miembros', miembrosRoutes);
@@ -26,7 +27,7 @@ app.use('/contacto', contactosRoutes);
 
 // Página principal
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('home', { titulo: 'Inicio - Equipo Freelance' });
 });
 
 // Iniciar el servidor
