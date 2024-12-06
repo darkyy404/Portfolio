@@ -1,0 +1,112 @@
+/* Contenedor de las tarjetas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo de cada tarjeta */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de perfil */
+.card-header {
+    background: #007bff;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header .profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid #fff;
+}
+
+/* Información del miembro */
+.card-body {
+    padding: 60px 10px 10px;
+    text-align: center;
+}
+
+.card-body h2 {
+    font-size: 1.3em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.card-body h3 {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0 10px;
+    font-weight: normal;
+}
+
+.card-body p {
+    font-size: 0.9em;
+    color: #777;
+    margin: 0;
+}
+
+/* Enlaces a GitHub y LinkedIn */
+.card-footer {
+    text-align: center;
+    padding: 10px;
+    background: #f4f4f4;
+    border-top: 1px solid #eee;
+}
+
+.card-footer a {
+    margin: 0 10px;
+    font-size: 1.5em;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card-footer a:hover {
+    color: #007bff;
+}
+
+/* Detalles adicionales (Tecnologías e Idiomas) */
+.card-details {
+    padding: 15px;
+    background: #f9f9f9;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.card-details h4 {
+    font-size: 1em;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.card-details ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.card-details ul li {
+    margin-bottom: 5px;
+}
