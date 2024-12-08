@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="/public/css/miembros.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
 
-
 <h1>{{titulo}}</h1>
 <div class="card-container">
     {{#each miembros}}
@@ -18,10 +17,13 @@
             <p>{{this.proyectos_personales}}</p>
         </div>
 
-        <!-- Footer con enlaces generales -->
+        <!-- Footer con todos los iconos de redes sociales -->
         <div class="card-footer">
-            <a href="{{this.contacto.github}}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="{{this.contacto.linkedin}}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            {{#each this.redesSociales}}
+            <a href="{{this.url}}" target="_blank" title="{{this.nombre}}">
+                <i class="{{this.icono}}"></i>
+            </a>
+            {{/each}}
         </div>
 
         <!-- Detalles de tecnologías e idiomas -->
@@ -37,20 +39,6 @@
             <ul>
                 {{#each this.idiomas}}
                 <li>{{this.nombre}} (Nivel: {{this.nivel}})</li>
-                {{/each}}
-            </ul>
-        </div>
-
-        <!-- Redes sociales dinámicas -->
-        <div class="card-social-links">
-            <h4>Redes sociales:</h4>
-            <ul>
-                {{#each this.redesSociales}}
-                <li>
-                    <a href="{{this.url}}" target="_blank" title="{{this.nombre}}">
-                        <i class="{{this.icono}}"></i> {{this.nombre}}
-                    </a>
-                </li>
                 {{/each}}
             </ul>
         </div>

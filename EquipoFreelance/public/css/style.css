@@ -99,3 +99,158 @@ footer {
     font-size: 0.9em;
 }
 
+/* Sección de Proyectos */
+.proyectos {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.proyectos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.proyectos-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.proyecto {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.proyecto h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.proyecto ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Card Styles */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background: #007bff;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header .profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Hace la imagen circular */
+    border: 5px solid #fff;
+    object-fit: cover; /* Ajusta la imagen para llenar el círculo */
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card-body {
+    padding: 60px 10px 10px;
+    text-align: center;
+}
+
+.card-body h2 {
+    font-size: 1.3em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.card-body h3 {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0 10px;
+    font-weight: normal;
+}
+
+.card-body p {
+    font-size: 0.9em;
+    color: #777;
+    margin: 0;
+}
+
+.card-footer {
+    text-align: center;
+    padding: 10px;
+    background: #f4f4f4;
+    border-top: 1px solid #eee;
+}
+
+.card-footer a {
+    margin: 0 10px;
+    font-size: 1.5em;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card-footer a:hover {
+    color: #007bff;
+}
+
+.card-details {
+    padding: 15px;
+    background: #f9f9f9;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.card-details h4 {
+    font-size: 1em;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.card-details ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.card-details ul li {
+    margin-bottom: 5px;
+}
