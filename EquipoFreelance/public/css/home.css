@@ -114,49 +114,61 @@ nav ul li a:hover {
     gap: 20px;
 }
 
-/* Ajuste para las imágenes de los miembros */
+/* Social Links Styles */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #f39c12; /* Color inicial */
+    font-size: 1.2em; /* Tamaño ajustado */
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2); /* Efecto de zoom al pasar el ratón */
+    color: #fff; /* Cambiar a blanco en hover */
+}
+
+/* Miembros Tarjetas */
+.member-card {
+    background: #1a1a1a; /* Fondo oscuro */
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
 .member-card img {
     width: 100%;
-    height: 60%;
-    object-fit: contain; /* Cambiado a contain para mostrar toda la imagen */
-    border-bottom: 2px solid #f39c12;
-    opacity: 0.9;
-    transition: opacity 0.3s;
-}
-
-.member-card {
-    position: relative;
-    width: 280px;
-    min-height: 400px; /* Ajustado para incluir toda la tarjeta */
-    background: #222;
-    border-radius: 10px;
-    overflow: hidden;
-    text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.member-card .card-text {
-    padding: 10px;
-    color: #fff;
-    text-align: center;
-}
-
-.member-card h3 {
-    font-size: 1.2em;
-    color: #f39c12;
-    margin-bottom: 5px;
-}
-
-.member-card p {
-    font-size: 0.9em;
-    color: #ccc;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #f39c12; /* Línea dorada debajo de la imagen */
 }
 
 .member-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
+
+.member-card h3 {
+    font-size: 1.5em;
+    color: #f39c12;
+    margin-top: 15px;
+}
+
+.member-card p {
+    font-size: 1em;
+    color: #dcdcdc; /* Gris claro */
+    margin: 10px 0;
+}
+
 
 /* Projects Section */
 .projects {
@@ -173,60 +185,66 @@ nav ul li a:hover {
 .projects-cards {
     display: flex;
     flex-wrap: wrap;
+    gap: 40px;
     justify-content: center;
-    gap: 20px;
+    padding: 20px;
 }
 
 .project-card {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    background: #222;
-    border-radius: 10px;
+    background: #1a1a1a; /* Fondo oscuro */
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+    width: 320px;
     overflow: hidden;
-    text-decoration: none;
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.project-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-bottom: 2px solid #f39c12;
-    opacity: 0.9;
-    transition: opacity 0.3s;
-}
-
-.project-card .card-text {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-    width: calc(100% - 40px);
-}
-
-.project-card h3 {
-    font-size: 1.2em;
-    color: #f39c12;
-    margin-bottom: 5px;
-}
-
-.project-card p {
-    font-size: 0.9em;
-    color: #ccc;
-}
-
-.project-card:hover img {
-    opacity: 0.7;
+    text-align: center;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Imagen del proyecto */
+.card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #000;
+    border-bottom: 2px solid #f39c12; /* Línea dorada debajo de la imagen */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mostrar la imagen completa sin distorsionar */
+    transition: transform 0.3s;
+}
+
+.card-image:hover img {
+    transform: scale(1.1); /* Efecto de zoom */
+}
+
+/* Contenido del proyecto */
+.card-content {
+    padding: 20px;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.card-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #f39c12;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card-content p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #dcdcdc; /* Gris claro */
+    text-align: center;
 }
 
 /* Footer */

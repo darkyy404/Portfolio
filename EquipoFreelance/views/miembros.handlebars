@@ -37,8 +37,22 @@
                     {{/each}}
                 </ul>
             </div>
+            <!-- Redes sociales -->
+            <div class="social-links">
+                {{#if this.linkedin}}
+                <a href="{{this.linkedin}}" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                {{/if}}
+                {{#if this.github}}
+                <a href="{{this.github}}" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                {{/if}}
+            </div>
         </div>
     </div>
     {{/each}}
 </div>
+
 

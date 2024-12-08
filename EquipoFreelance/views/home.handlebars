@@ -21,26 +21,44 @@
     <h2>Nuestro Equipo</h2>
     <div class="team-cards">
         {{#each miembros}}
-    <div class="member-card">
-        <img src="/public/images/{{this.imagen}}" alt="Foto de {{this.nombre}}" class="member-img">
-        <h3>{{this.nombre}} {{this.apellidos}}</h3>
-        <p> {{this.titulacion}}</p>
-    </div>
-    {{/each}}
+        <div class="member-card">
+            <img src="/public/images/{{this.imagen}}" alt="Foto de {{this.nombre}}" class="member-img">
+            <h3>{{this.nombre}} {{this.apellidos}}</h3>
+            <p>{{this.titulacion}}</p>
+            
+            <!-- Redes sociales -->
+            <div class="social-links">
+                {{#if this.linkedin}}
+                <a href="{{this.linkedin}}" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                {{/if}}
+                {{#if this.github}}
+                <a href="{{this.github}}" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
     </div>
 </section>
+
 
 <section class="projects">
     <h2>Proyectos Realizados</h2>
     <div class="projects-cards">
         {{#each trabajos}}
-        <a href="/trabajos" class="project-card">
-            <img src="/public/images/{{this.imagen}}" alt="{{this.titulo}}">
-            <div class="card-text">
+        <div class="project-card">
+            <div class="card-image">
+                <img src="/public/images/{{this.imagen}}" alt="{{this.titulo}}">
+            </div>
+            <div class="card-content">
                 <h3>{{this.titulo}}</h3>
                 <p>{{this.descripcion}}</p>
             </div>
-        </a>
+        </div>
         {{/each}}
     </div>
 </section>
+
