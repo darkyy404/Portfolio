@@ -1,4 +1,15 @@
 <link rel="stylesheet" href="/public/css/miembros.css">
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/miembros">Miembros</a></li>
+            <li><a href="/trabajos">Trabajos</a></li>
+        </ul>
+    </nav>
+</header>
+
 <div class="members-header">
     <h1>Miembros del Equipo</h1>
 </div>
@@ -6,21 +17,28 @@
 <div class="members-grid">
     {{#each miembros}}
     <div class="member-card">
-        <img src="/public/images/{{this.imagen}}" alt="Foto de {{this.nombre}}" class="member-img">
-        <h3>{{this.nombre}} {{this.apellidos}}</h3>
-        <p><strong>Titulación:</strong> {{this.titulacion}}</p>
-        <h4>Tecnologías:</h4>
-        <ul>
-            {{#each this.tecnologias}}
-            <li>{{this.nombre}} (Nivel: {{this.nivel}})</li>
-            {{/each}}
-        </ul>
-        <h4>Idiomas:</h4>
-        <ul>
-            {{#each this.idiomas}}
-            <li>{{this.nombre}} (Nivel: {{this.nivel}})</li>
-            {{/each}}
-        </ul>
+        <div class="card-image">
+            <img src="/public/images/{{this.imagen}}" alt="Foto de {{this.nombre}}">
+        </div>
+        <div class="card-content">
+            <h3>{{this.nombre}} {{this.apellidos}}</h3>
+            <p><strong>Titulación:</strong> {{this.titulacion}}</p>
+            <div class="details">
+                <h4>Tecnologías:</h4>
+                <ul>
+                    {{#each this.tecnologias}}
+                    <li>{{this.nombre}} (Nivel: {{this.nivel}})</li>
+                    {{/each}}
+                </ul>
+                <h4>Idiomas:</h4>
+                <ul>
+                    {{#each this.idiomas}}
+                    <li>{{this.nombre}} (Nivel: {{this.nivel}})</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
     </div>
     {{/each}}
 </div>
+
