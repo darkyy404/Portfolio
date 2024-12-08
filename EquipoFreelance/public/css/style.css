@@ -65,29 +65,37 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-
 /* Header */
 header {
-    background-color: #007bff;
-    color: white;
+    background: linear-gradient(135deg, #240046, #3a0ca3); /* Ajustado a la paleta galáctica */
+    color: #ffffff;
     padding: 10px 20px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-header a {
-    color: white;
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
     font-weight: bold;
-    text-decoration: none;
 }
 
 header nav {
-    margin: 10px 0;
+    margin-top: 10px;
 }
 
 header nav a {
-    margin: 0 10px;
+    color: #eaeaea; /* Enlaces claros */
+    margin: 0 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
 }
+
+header nav a:hover {
+    color: #4ea8de; /* Efecto hover */
+}
+
 
 /* Footer */
 footer {
@@ -98,4 +106,3 @@ footer {
     margin-top: 20px;
     font-size: 0.9em;
 }
-

@@ -1,10 +1,16 @@
-<h1>{{titulo}}</h1>
-<ul>
+<link rel="stylesheet" href="/public/css/trabajos.css">
+
+<div class="projects-header">
+    <h1>Proyectos Realizados</h1>
+</div>
+
+<div class="projects-grid">
     {{#each trabajos}}
-    <li>
-        <strong>{{this.titulo}}</strong>
-        <p>Descripción: {{this.descripcion}}</p>
-        <p>Empresa: {{this.empresa}}</p>
-    </li>
+    <div class="project-card">
+        <h3>{{this.titulo}}</h3>
+        <p><strong>Descripción:</strong> {{this.descripcion}}</p>
+        <p><strong>Empresa:</strong> {{this.empresa}}</p>
+        <p><strong>Tecnologías:</strong> {{this.tecnologias}}</p>
+    </div>
     {{/each}}
-</ul>
+</div>

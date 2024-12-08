@@ -1,37 +1,58 @@
-<div class="home-header">
-    <p class="tagline">Un equipo de profesionales dedicados al desarrollo web y diseño de alta calidad.</p>
-</div>
-
-<section class="team-section">
-    <h2>Conoce a Nuestro Equipo</h2>
-    <div class="team-grid">
-        {{#each miembros}}
-        <div class="team-card">
-            <img src="/public/images/{{this.imagen}}" alt="{{this.nombre}}" class="team-img">
-            <h3>{{this.nombre}} {{this.apellidos}}</h3>
-            <p>{{this.titulacion}}</p>
-            <a href="{{this.contacto.linkedin}}" target="_blank" class="social-link">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="{{this.contacto.github}}" target="_blank" class="social-link">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-        {{/each}}
-    </div>
-</section>
-
-<section class="projects-section">
-    <h2>Proyectos Realizados</h2>
-    <div class="projects-grid">
-        {{#each trabajos}}
-        <div class="project-card">
-            <h3>{{this.titulo}}</h3>
-            <p>{{this.descripcion}}</p>
-            <p><strong>Empresa:</strong> {{this.empresa}}</p>
-            <p><strong>Tecnologías:</strong> {{this.tecnologias}}</p>
-        </div>
-        {{/each}}
-    </div>
-</section>
 <link rel="stylesheet" href="/public/css/home.css">
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/miembros">Miembros</a></li>
+            <li><a href="/trabajos">Trabajos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Portfolio</h1>
+        <p>Especialistas en desarrollo web, diseño y SEO para llevar tus proyectos al siguiente nivel.</p>
+    </div>
+</section>
+
+<section class="team">
+    <h2>Nuestro Equipo</h2>
+    <div class="team-cards">
+        {{#each miembros}}
+    <div class="member-card">
+        <img src="/public/images/{{this.imagen}}" alt="Foto de {{this.nombre}}" class="member-img">
+        <h3>{{this.nombre}} {{this.apellidos}}</h3>
+        <p><strong>Titulación:</strong> {{this.titulacion}}</p>
+        <h4>Tecnologías:</h4>
+        <ul>
+            {{#each this.tecnologias}}
+            <li>{{this.nombre}} (Nivel: {{this.nivel}})</li>
+            {{/each}}
+        </ul>
+        <h4>Idiomas:</h4>
+        <ul>
+            {{#each this.idiomas}}
+            <li>{{this.nombre}} (Nivel: {{this.nivel}})</li>
+            {{/each}}
+        </ul>
+    </div>
+    {{/each}}
+    </div>
+</section>
+
+<section class="projects">
+    <h2>Proyectos Realizados</h2>
+    <div class="projects-cards">
+        {{#each trabajos}}
+        <a href="/trabajos" class="project-card">
+            <img src="/public/images/{{this.imagen}}" alt="{{this.titulo}}">
+            <div class="card-text">
+                <h3>{{this.titulo}}</h3>
+                <p>{{this.descripcion}}</p>
+            </div>
+        </a>
+        {{/each}}
+    </div>
+</section>

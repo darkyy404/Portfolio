@@ -1,20 +1,20 @@
-.members-header {
+.projects-header {
     text-align: center;
     padding: 40px 20px;
-    background: linear-gradient(135deg, #2a0d45, #191970);
+    background: linear-gradient(135deg, #191970, #3a2a77);
     color: white;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
-.members-grid {
+.projects-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 
-.member-card {
+.project-card {
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -23,7 +23,7 @@
     text-align: left;
 }
 
-.member-card h3 {
-    color: #191970;
+.project-card h3 {
+    color: #3a2a77;
     margin-bottom: 10px;
 }
