@@ -1,3 +1,5 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
 /* Contenedor de las tarjetas */
 .card-container {
     display: flex;
@@ -109,4 +111,42 @@
 
 .card-details ul li {
     margin-bottom: 5px;
+}
+
+/* Redes sociales adicionales */
+.card-social-links {
+    padding: 15px;
+    text-align: center;
+    background: #f4f4f4;
+    border-top: 1px solid #eee;
+}
+
+.card-social-links h4 {
+    font-size: 1em;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.card-social-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.card-social-links ul li {
+    display: inline-block;
+}
+
+.card-social-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.card-social-links ul li a:hover {
+    color: #007bff;
 }
