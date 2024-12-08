@@ -24,19 +24,7 @@
     <div class="member-card">
         <img src="/public/images/{{this.imagen}}" alt="Foto de {{this.nombre}}" class="member-img">
         <h3>{{this.nombre}} {{this.apellidos}}</h3>
-        <p><strong>Titulación:</strong> {{this.titulacion}}</p>
-        <h4>Tecnologías:</h4>
-        <ul>
-            {{#each this.tecnologias}}
-            <li>{{this.nombre}} (Nivel: {{this.nivel}})</li>
-            {{/each}}
-        </ul>
-        <h4>Idiomas:</h4>
-        <ul>
-            {{#each this.idiomas}}
-            <li>{{this.nombre}} (Nivel: {{this.nivel}})</li>
-            {{/each}}
-        </ul>
+        <p> {{this.titulacion}}</p>
     </div>
     {{/each}}
     </div>
