@@ -1,3 +1,37 @@
+<div class="home-header">
+    <p class="tagline">Un equipo de profesionales dedicados al desarrollo web y diseño de alta calidad.</p>
+</div>
 
-<h1>Bienvenido al Equipo Freelance</h1>
-<p>Explora los trabajos realizados y conoce a nuestro equipo.</p>
+<section class="team-section">
+    <h2>Conoce a Nuestro Equipo</h2>
+    <div class="team-grid">
+        {{#each miembros}}
+        <div class="team-card">
+            <img src="/public/images/{{this.imagen}}" alt="{{this.nombre}}" class="team-img">
+            <h3>{{this.nombre}} {{this.apellidos}}</h3>
+            <p>{{this.titulacion}}</p>
+            <a href="{{this.contacto.linkedin}}" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="{{this.contacto.github}}" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        {{/each}}
+    </div>
+</section>
+
+<section class="projects-section">
+    <h2>Proyectos Realizados</h2>
+    <div class="projects-grid">
+        {{#each trabajos}}
+        <div class="project-card">
+            <h3>{{this.titulo}}</h3>
+            <p>{{this.descripcion}}</p>
+            <p><strong>Empresa:</strong> {{this.empresa}}</p>
+            <p><strong>Tecnologías:</strong> {{this.tecnologias}}</p>
+        </div>
+        {{/each}}
+    </div>
+</section>
+<link rel="stylesheet" href="/public/css/home.css">

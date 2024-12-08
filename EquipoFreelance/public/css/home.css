@@ -1,0 +1,98 @@
+/* Home Header */
+.home-header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+}
+
+.home-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.home-header .tagline {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Team Section */
+.team-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.team-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #007bff;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.team-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    padding: 15px;
+}
+
+.team-img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.social-link {
+    margin: 5px;
+    font-size: 1.5em;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: #007bff;
+}
+
+/* Projects Section */
+.projects-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.projects-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #007bff;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
